@@ -57,7 +57,6 @@
 }
 
 .popup__block {
-    display: none;
     position: fixed;
     width: 100%;
     height: 100%;
@@ -210,13 +209,6 @@
 }
 
 .what-content-write {
-    width: 330px;
-    height: 131px;
-    background-color: #f4f7f6;
-    cursor: pointer;
-}
-
-.what-content-write {
     border: none;
     box-sizing: border-box;
     width: 330px;
@@ -230,6 +222,7 @@
     color: #000000;
     font-weight: normal;
     font-family: "Open Sans";
+    cursor: pointer;
 }
 
 .what-content-write:focus {
@@ -237,58 +230,60 @@
 }
 
 .what-content-btn {
-    width: 330px;
+    min-width: 330px;
     height: 48px;
 }
 
 .cap {
     position: relative;
-    background-image: url("../img/banner-bg.jpg");
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 450px;
 }
 
-.cap::before {
-    content: "";
+.cap-image {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 450px;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+}
+
+.cap-block {
+    position: relative;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
+    padding: 28px 245px  28px 248px;
+    /*background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;*/
+}
+
+.cap-header {
+    display: flex;
+    width: 100%;
+    height: 40px;
+    margin-bottom: auto;
 }
 
 .cap-logo {
-    display: flex;
-    position: absolute;
     width: 179px;
     object-fit: cover;
-    top: 28px;
-    left: 248px;
-    z-index: 2;
-}
-
-.cap-title {
-    margin: 0px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 45px;
-    line-height: 75px;
-    text-transform: uppercase;
-    color: #ffffff;
-    font-family: "Open Sans-Bold", sans-serif;
-    font-weight: bold;
-    font-style: normal;
-    text-align: center;
-    z-index: 2;
 }
 
 .cap-menu {
     display: flex;
-    position: absolute;
-    top: 45px;
-    right: 245px;
+    align-self: flex-end;
+    margin-left: auto;
+    margin-bottom: 0;
+    padding: 0;
     gap: 36px;
     list-style-type: none;
     font-size: 13px;
@@ -297,7 +292,6 @@
     font-family: "Open Sans", sans-serif;
     font-weight: normal;
     font-style: normal;
-    z-index: 2;
 }
 
 .cap-menu__link {
@@ -310,6 +304,33 @@
     text-decoration: underline;
 }
 
+.cap-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.cap-title {
+    margin: 0px;
+    /*top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);*/
+    font-size: 45px;
+    line-height: 75px;
+    text-transform: uppercase;
+    color: #ffffff;
+    font-family: "Open Sans-Bold", sans-serif;
+    font-weight: bold;
+    font-style: normal;
+    text-align: center;
+    z-index: 2;
+}
+
 .trends {
     display: flex;
     flex-direction: column;
@@ -318,7 +339,7 @@
     align-items: center;
     margin-top: 57px;
     width: 100%;
-    height: 386px;
+    min-height: 386px;
 }
 
 .basic-title {
@@ -345,9 +366,10 @@
 
 .trends-container {
     display: flex;
+    flex-wrap: wrap;
     box-sizing: border-box;
     width: 100%;
-    height: 320px;
+    min-height: 320px;
     margin-top: 28px;
     gap: var(--gap-trends-container);
 }
@@ -356,12 +378,12 @@
     display: flex;
     position: relative;
     width: calc((1660px - 12px) / 4);
-    height: 320px;
+    min-height: 320px;
     z-index: 0;
 }
 
 .trends-container__blok-photo {
-    position: relative;
+    position: absolute;
     width: 100%;
     height: 100%;
     top: 0;
@@ -370,14 +392,17 @@
     z-index: 1;
 }
 
-.trends-container__block::before {
-    content: "";
-    position: absolute;
+.trends-container__block-fon {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    box-sizing: border-box;
     top: 0;
     left: 0;
     width: 100%;
-    height: 320px;
+    min-height: 320px;
     background-color: rgba(0, 0, 0, 0.6);
+    padding: 0 0 16px 18px;
     z-index: 2;
 }
 
@@ -389,14 +414,11 @@
     width: 370px;
     background-color: rgba(0,0,0,0);
     border: 3px solid #b59f5b;
-    position: absolute;
-    left: 18px;
-    bottom: 16px;
-    z-index: 3;
 }
 
 .category {
     display: flex;
+    flex-wrap: wrap;
     gap: 20px;
     font-size: 14px;
     line-height: 40px;
@@ -552,32 +574,32 @@
 }
 
 .latest-one-post {
-    position: relative;
+    display: flex;
+    gap: 20px;
     width: 100%;
-    height: 70px;
+    min-height: 70px;
 }
 
 .latest-one-post-photo {
-    position: absolute;
-    top: 0;
-    left: 0;
     height: 100%;
     cursor: pointer;
     text-decoration: none;
 }
 
+.latest-one-post-info {
+    width: 181px;
+    min-height: 70px;
+}
+
 .latest-post-date {
-    position: absolute;
-    top: -14px;
-    left: 90px;
+    display: block;
+    margin-top: -14px;
     opacity: 0.541;
     color: #000000;
 }
 
 .latest-post-name {
-    position: absolute;
-    top: 17px;
-    left: 90px;
+    display: block;
     margin: 0;
     font-size: 14px;
     line-height: 18px;
@@ -678,11 +700,6 @@
     margin: 6px auto 23px auto;
 }
 
-.tags > .sidebar-titles::after {
-    content: '';
-    margin: 6px auto 23px auto;
-}
-
 .tags {
     display: flex;
     justify-content: center;
@@ -699,6 +716,7 @@
 
 .category__tags {
     display: flex;
+    flex-wrap: nowrap;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
@@ -746,7 +764,6 @@
 
 .shop {
     display: flex;
-    position: relative;
     flex-direction: column;
     align-items: center;
     margin-top: 64px;
@@ -782,25 +799,27 @@
     z-index: 0;
     box-sizing: border-box;
     width: 347px;
-    height: 440px;
+    min-height: 440px;
     margin-top: 28px;
 }
 
 .shop-photo {
-    position: absolute;
+    position: relative;
     top: 0;
     left: 23px;
     z-index: 1;
 }
 
 .shop-info {
-    position: absolute;
+    position: relative;
     box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
     padding: 0 21px 0 20px;
     left: 0;
-    bottom: 0;
+    bottom: 35px;
     width: 100%;
-    height: 267px;
+    min-height: 267px;
     z-index: 2;
     background-color: rgba(0,0,0,0);
     border: 3px solid #b59f5b;
@@ -909,7 +928,7 @@
     width: 1170px;
     height: 213px;
     padding: 0 15px 0 15px;
-    margin: 64px auto 0 auto;
+    margin: 29px auto 0 auto;
 }
 
 .site-end-social {

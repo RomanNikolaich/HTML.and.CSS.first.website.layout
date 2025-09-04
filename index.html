@@ -2,7 +2,7 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
     <title>Мой проект</title>
     <link rel="stylesheet" href="css/style.css">
     <style>
@@ -13,17 +13,6 @@
         body {
             margin: 0;
             background: #ffffff;
-        }
-
-        .cap {
-            display: flex;
-            position: relative;
-            box-sizing: border-box;
-            width: 100%;
-            height: 450px;
-            background-size: cover;
-            background-position: center;
-            z-index: 0;
         }
 
         .trends-secondary-title {
@@ -37,12 +26,11 @@
 </head>
 <body>
     <div class="container">
-        <div class="popup">
-            <input id="popup_id" type="checkbox" class="visually-hidden">
+        <dialog class="popup">
             <div class="popup__block">
-                <label for="popup_id" class="popup__close__back"></label>
-                <div class="popup__info">
-                    <label for="popup_id" class="popup__close"><img src="svg/form-x.svg" alt="image"></label>
+                <label class="popup__close__back"></label>
+                <form method="dialog" class="popup__info">
+                    <label class="popup__close"><img src="svg/form-x.svg" alt="image"></label>
                     <h1 class="basic-title popup-title">Ваш фидбек</h1>
                     <div class="popup-choice">
                         <h3 class="popup-choice-question">Как часто вы заходите на сайт?</h3>
@@ -78,66 +66,79 @@
                         <textarea class="what-content-write" placeholder="Может, больше рецептов?"></textarea>
                         <button class="category subscribe-button what-content-btn">Отправить</button>
                     </form>
+                </form>
+            </div>
+        </dialog >
+        <header class="cap">
+            <img src="img/banner-bg.jpg" class="cap-image">
+            <div class="cap-block">
+                <div class="cap-header">
+                    <img class="cap-logo" src="svg/noemi-logo.svg" alt="image">
+                    <ul class="cap-menu">
+                        <li><a class="cap-menu__link" href="#">Главная</a></li>
+                        <li><a class="cap-menu__link" href="#">Посты</a></li>
+                        <li><a class="cap-menu__link" href="#">Статьи</a></li>
+                        <li><a class="cap-menu__link" href="#">Теги</a></li>
+                        <li><a class="cap-menu__link" href="#">Темы</a></li>
+                        <li><a class="cap-menu__link" href="#">Контакты</a></li>
+                    </ul>
+                </div>
+                <div class="cap-content">
+                    <h1 class="cap-title">Блог о творчестве, спорте и образе жизни</h1>
                 </div>
             </div>
-        </div>
-        <header class="cap">
-            <label for="popup_id" class="popup__btn"><img class="cap-logo" src="svg/noemi-logo.svg" alt="image"></label>
-            <h1 class="cap-title">Блог о творчестве, спорте
-                и образе жизни</h1>
-            <ul class="cap-menu">
-                <li><a class="cap-menu__link" href="#">Главная</a></li>
-                <li><a class="cap-menu__link" href="#">Посты</a></li>
-                <li><a class="cap-menu__link" href="#">Статьи</a></li>
-                <li><a class="cap-menu__link" href="#">Теги</a></li>
-                <li><a class="cap-menu__link" href="#">Темы</a></li>
-                <li><a class="cap-menu__link" href="#">Контакты</a></li>
-            </ul>
         </header>
         <section class="trends">
             <h2 class="basic-title trends-title">Сейчас в тренде</h2>
             <div class="trends-container">
                 <article class="trends-container__block">
                     <img src="img/trend1.jpg" class="trends-container__blok-photo" alt="image">
-                    <div class="trends-container__block-info">
-                        <ul class="category">
-                            <li><a class="category__links" href="#">lifestyle</a></li>
-                            <li><a class="category__links" href="#">interior</a></li>
-                        </ul>
-                        <a class="basic-title trends-secondary-title" href="#">
-                            Сейчас в тренде: сад на подоконнике</a>
+                    <div class="trends-container__block-fon">
+                        <div class="trends-container__block-info">
+                            <ul class="category">
+                                <li><a class="category__links" href="#">lifestyle</a></li>
+                                <li><a class="category__links" href="#">interior</a></li>
+                            </ul>
+                            <a class="basic-title trends-secondary-title" href="#">
+                                Сейчас в тренде: сад на подоконнике</a>
+                        </div>
                     </div>
                 </article>
                 <article class="trends-container__block">
                     <img src="img/trend2.jpg" class="trends-container__blok-photo">
-                    <div class="trends-container__block-info">
-                        <ul class="category">
-                            <li><a class="category__links" href="#">food</a></li>
-                        </ul>
-                        <a class="basic-title trends-secondary-title" href="#">
-                            Сыры на красивых картинка из интернета: какие они на вкус?</a>
+                    <div class="trends-container__block-fon">
+                        <div class="trends-container__block-info">
+                            <ul class="category">
+                                <li><a class="category__links" href="#">food</a></li>
+                            </ul>
+                            <a class="basic-title trends-secondary-title" href="#">
+                                Сыры на красивых картинка из интернета: какие они на вкус?</a>
+                        </div>
+                    </div>
+                </article>
+                 <article class="trends-container__block">
+                    <img src="img/trend2.jpg" class="trends-container__blok-photo">
+                    <div class="trends-container__block-fon">
+                        <div class="trends-container__block-info">
+                            <ul class="category">
+                                <li><a class="category__links" href="#">food</a></li>
+                            </ul>
+                            <a class="basic-title trends-secondary-title" href="#">
+                                Сыры на красивых картинка из интернета: какие они на вкус?</a>
+                        </div>
                     </div>
                 </article>
                 <article class="trends-container__block">
                     <img src="img/trend3.jpg" class="trends-container__blok-photo" alt="image">
-                    <div class="trends-container__block-info">
-                        <ul class="category">
-                            <li><a class="category__links" href="#">lifestyle</a></li>
-                            <li><a class="category__links" href="#">travel</a></li>
-                        </ul>
-                        <a class="basic-title trends-secondary-title" href="#">
-                            Собираемся в первый поход в горы</a>
-                    </div>
-                </article>
-                <article class="trends-container__block">
-                    <img src="img/trend4.jpg" class="trends-container__blok-photo" alt="image">
-                    <div class="trends-container__block-info">
-                        <ul class="category">
-                            <li><a class="category__links" href="#">food</a></li>
-                            <li><a class="category__links" href="#">health</a></li>
-                        </ul>
-                        <a class="basic-title trends-secondary-title" href="#">
-                            Сейчас в тренде: сколько витамина с в лимонах?</a>
+                    <div class="trends-container__block-fon">
+                        <div class="trends-container__block-info">
+                            <ul class="category">
+                                <li><a class="category__links" href="#">lifestyle</a></li>
+                                <li><a class="category__links" href="#">travel</a></li>
+                            </ul>
+                            <a class="basic-title trends-secondary-title" href="#">
+                                Собираемся в первый поход в горы</a>
+                        </div>
                     </div>
                 </article>
             </div>
@@ -152,8 +153,7 @@
                                 <li><a class="category__links" href="#">travel</a></li>
                                 <li><a class="category__links" href="#">health</a></li>
                             </ul>
-                            <a class="basic-title secondary-title" href="#">
-                                10 мест, ради которых стоит проснуться на рассвете</a>
+                            <a class="basic-title secondary-title" href="#">10 мест, ради которых стоит проснуться на рассвете</a>
                             <div class="date-author">
                                 <div class="basic-title post-list-date">10 июня 2019</div>
                                 <div class="basic-title post-list-author">Неизвестный автор</div>
@@ -174,8 +174,7 @@
                                 <li><a class="category__links" href="#">health</a></li>
                                 <li><a class="category__links" href="#">lifestyle</a></li>
                             </ul>
-                            <a class="basic-title secondary-title" href="#">
-                                Йога для начинающих в домашних условиях</a>
+                            <a class="basic-title secondary-title" href="#">Йога для начинающих в домашних условиях</a>
                             <div class="date-author">
                                 <span class="basic-title post-list-date">10 июня 2019</span>
                                 <span class="basic-title post-list-author">Неизвестный автор</span>
@@ -195,8 +194,7 @@
                             <ul class="category">
                                 <li><a class="category__links" href="#">music</a></li>
                             </ul>
-                            <a class="basic-title secondary-title" href="#">
-                                Лучшие музыкальные фестивали этого лета</a>
+                            <a class="basic-title secondary-title" href="#">Лучшие музыкальные фестивали этого лета</a>
                             <div class="date-author">
                                 <span class="basic-title post-list-date">10 июня 2019</span>
                                 <span class="basic-title post-list-author">Неизвестный автор</span>
@@ -220,8 +218,7 @@
                                 <li><a class="category__links" href="#">lifestyle</a></li>
                                 <li><a class="category__links" href="#">food</a></li>
                             </ul>
-                            <a class="basic-title secondary-title" href="#">
-                                Наукоёмкий подход к кулинарии</a>
+                            <a class="basic-title secondary-title" href="#">Наукоёмкий подход к кулинарии</a>
                             <div class="date-author">
                                 <span class="basic-title post-list-date">10 июня 2019</span>
                                 <span class="basic-title post-list-author">Неизвестный автор</span>
@@ -241,8 +238,7 @@
                                 <li><a class="category__links" href="#">lifestyle</a></li>
                                 <li><a class="category__links" href="#">food</a></li>
                             </ul>
-                            <a class="basic-title secondary-title" href="#">
-                                Делаем модные принты на подушках для интерьера</a>
+                            <a class="basic-title secondary-title" href="#">Делаем модные принты на подушках для интерьера</a>
                             <div class="date-author">
                                 <span class="basic-title post-list-date">10 июня 2019</span>
                                 <span class="basic-title post-list-author">Неизвестный автор</span>
@@ -262,37 +258,47 @@
                     <article class="latest-one-post">
                         <a class="latest-one-post-photo" href="#">
                             <img src="img/2.jpg" alt="image"></a>
-                        <span class="post-list-date latest-post-date">14 июня 2019</span>
-                        <a class="basic-title latest-post-name" href="#">
-                            10 мест, ради которых стоит проснуться</a>
+                        <div class="latest-one-post-info">
+                            <span class="post-list-date latest-post-date">14 июня 2019</span>
+                            <a class="basic-title latest-post-name" href="#">
+                                10 мест, ради которых стоит проснуться</a>
+                        </div>
                     </article>
                     <article class="latest-one-post">
                         <a class="latest-one-post-photo" href="#">
                             <img src="img/151.jpg" alt="image"></a>
-                        <span class="post-list-date latest-post-date">14 июня 2019</span>
-                        <a class="basic-title latest-post-name" href="#">
-                            Йога для домашних</a>
+                        <div class="latest-one-post-info">
+                            <span class="post-list-date latest-post-date">14 июня 2019</span>
+                            <a class="basic-title latest-post-name" href="#">
+                                Йога для домашних</a>
+                        </div>
                     </article>
                     <article class="latest-one-post">
                         <a class="latest-one-post-photo" href="#">
                             <img src="img/45.jpg" alt="image"></a>
-                        <span class="post-list-date latest-post-date">14 июня 2019</span>
-                        <a class="basic-title latest-post-name" href="#">
-                            Кулинарный подход к науке</a>
+                        <div class="latest-one-post-info">
+                            <span class="post-list-date latest-post-date">14 июня 2019</span>
+                            <a class="basic-title latest-post-name" href="#">
+                                Кулинарный подход к науке</a>
+                        </div>
                     </article>
                     <article class="latest-one-post">
                         <a class="latest-one-post-photo" href="#">
                             <img src="img/501.jpg" alt="image"></a>
-                        <span class="post-list-date latest-post-date">14 июня 2019</span>
-                        <a class="basic-title latest-post-name" href="#">
-                            Как мы превратили классное место в балкон</a>
+                        <div class="latest-one-post-info">
+                            <span class="post-list-date latest-post-date">14 июня 2019</span>
+                            <a class="basic-title latest-post-name" href="#">
+                                Как мы превратили классное место в балкон</a>
+                        </div>
                     </article>
                     <article class="latest-one-post">
                         <a class="latest-one-post-photo" href="#">
                             <img src="img/7.jpg" alt="image"></a>
-                        <span class="post-list-date latest-post-date">14 июня 2019</span>
-                        <a class="basic-title latest-post-name" href="#">
-                            Лучшие прически для распущенных волос</a>
+                        <div class="latest-one-post-info">
+                            <span class="post-list-date latest-post-date">14 июня 2019</span>
+                            <a class="basic-title latest-post-name" href="#">
+                                Лучшие прически для распущенных волос</a>
+                        </div>
                     </article>
                 </section>
                 <form action="#" class="search">
