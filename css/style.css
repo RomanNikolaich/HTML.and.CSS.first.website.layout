@@ -507,6 +507,7 @@
 .post-title-block {
     display: block;
     width: 340px;
+    margin-top: -5px;
     color: #0f0d0e;
 }
 
@@ -527,18 +528,21 @@
     color: #888888;
     font-family: "Open Sans";
     font-weight: normal;
+    margin-top: -5px;
 }
 
 .post-list-author {
     font-size: 12px;
     line-height: 40px;
     color: #000000;
+    margin-top: -5px;
 }
 
 .post-list-block-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin-top: -5px;
     gap: 11px;
     width: 380px;
     font-size: 15px;
@@ -717,7 +721,7 @@
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 100%;
+    width: 270px;
 }
 
 .list-tags {
