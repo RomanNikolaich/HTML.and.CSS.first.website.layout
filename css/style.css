@@ -473,7 +473,7 @@
 
 .post-list-block {
     display: flex;
-    gap: 26px;
+    gap: 29px;
     position: relative;
     width: 100%;
     min-height: 294px;
@@ -482,6 +482,7 @@
 .post-frame-and-text {
     display: flex;
     flex-direction: column;
+    width: 390px;
 }
 
 .post-list-block-photo {
@@ -491,7 +492,7 @@
 }
 
 .post-list-block-frame {
-    width: 393px;
+    width: 100%;
     margin-top: -13px;
     margin-bottom: 40px;
 }
@@ -733,6 +734,7 @@
     justify-content: center;
     box-sizing: border-box;
     color: #0f0d0e;
+    font-size: 12px;
     width: 86px;
     height: 30px;
     background-color: rgba(244, 243, 241, 0);
