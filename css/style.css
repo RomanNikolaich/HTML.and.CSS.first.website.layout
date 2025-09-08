@@ -413,6 +413,10 @@
     border: 3px solid #b59f5b;
 }
 
+.trends-container__block-info__personal {
+    padding-left: 39px;
+}
+
 .personal {
     width: 250px;
 }
@@ -534,6 +538,7 @@
 .post-list-author {
     font-size: 12px;
     line-height: 40px;
+    text-transform: none;
     color: #000000;
     margin-top: 6px;
 }
@@ -553,7 +558,7 @@
 
 .paragraph {
     width: 100%;
-    margin: 5px 0 0 0;
+    /*margin: 5px 0 0 0;*/
 }
 
 .sidebar {
