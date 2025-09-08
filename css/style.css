@@ -258,12 +258,12 @@
     left: 0;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
     flex-grow: 1;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
     padding: 28px 245px  28px 248px;
-    /*background-color: rgba(0, 0, 0, 0.6);
-    z-index: 1;*/
 }
 
 .cap-header {
@@ -309,7 +309,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
+    width: 700px;
     height: 100%;
     flex-grow: 1;
     text-align: center;
@@ -317,9 +317,6 @@
 
 .cap-title {
     margin: 0px;
-    /*top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);*/
     font-size: 45px;
     line-height: 75px;
     text-transform: uppercase;
@@ -498,6 +495,11 @@
     text-decoration: none;
 }
 
+.post-title-block {
+    display: block;
+    width: 340px;
+}
+
 .secondary-title-post-list:hover {
     color: #b59f5b;
 }
@@ -528,7 +530,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 11px;
-    width: 100%;
+    width: 380px;
     font-size: 15px;
     line-height: 22px;
     color: #0f0d0e;
@@ -593,7 +595,7 @@
 
 .latest-post-date {
     display: block;
-    margin-top: -14px;
+    margin-top: -16px;
     opacity: 0.541;
     color: #000000;
 }
@@ -601,6 +603,7 @@
 .latest-post-name {
     display: block;
     margin: 0;
+    margin-top: -11px;
     font-size: 14px;
     line-height: 18px;
     color: #000000;
