@@ -989,15 +989,9 @@
 }
 
 .site-end-copyright {
-    position-relative;
     justify-content: center;
     margin: 54px 0 0 0;
     cursor: auto;
-    font-size: 12px;
+    font-size: 1px;
     color: #999999;
-}
-
-.site-end-copyright__write {
-    position: relative;
-    top: -15px;
 }
