@@ -745,7 +745,7 @@ dialog {
     margin: 6px auto 23px auto;
 }
 
-.sidebar-subscribe:focus {
+subscribe-email:focus {
     outline: 1px solid #b59f5b;
 }
 
