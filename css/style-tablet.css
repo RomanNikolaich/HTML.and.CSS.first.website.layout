@@ -325,6 +325,7 @@ dialog {
     width: 23px;
     height: 3px;
     background-color: #ffffff;
+    font-size: 0;
 }
 
 .cap-menu {
