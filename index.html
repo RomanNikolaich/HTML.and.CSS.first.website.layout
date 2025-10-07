@@ -4,34 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой проект</title>
-    <link rel="stylesheet" href="css/style.css">
-    <style>
-        html {
-            font-size: 100%;
-        }
+    <link rel="stylesheet" href="css/style-mobile.css" media="(max-width: 767px)">
+    <link rel="stylesheet" href="css/style-tablet.css" media="(min-width: 768px) and (max-width: 1659px)">
+        <link rel="stylesheet" href="css/style-dekstop.css" media="(min-width: 1660px)">
 
-        body {
-            margin: 0;
-            background: #ffffff;
-        }
-
-        .trends-secondary-title {
-            display: block;
-            line-height: 24px;
-            color: #ffffff;
-            cursor: pointer;
-            text-decoration: none;
-       }
-    </style>
 </head>
 <body>
     <div class="container">
         <dialog class="popup">
             <div class="popup__block">
-                <label class="popup__close__back"></label>
-                <form method="dialog" class="popup__info">
+                <form action="#" method="dialog" class="popup__info">
                     <label class="popup__close"><img src="svg/form-x.svg" alt="image"></label>
-                    <h1 class="basic-title popup-title">Ваш фидбек</h1>
+                    <h2 class="basic-title popup-title">Ваш фидбек</h2>
                     <div class="popup-choice">
                         <h3 class="popup-choice-question">Как часто вы заходите на сайт?</h3>
                         <img class="popup-choice-arrows" src="svg/form-arrows.svg" alt="image">
@@ -51,30 +35,43 @@
                             Вы подписаны на e-mail рассылку?</h3>
                         <label class="popup-subscribe-checkbox">
                             <input class="visually-hidden" type="radio" name="popup-subscribe-ch">
-                            <span class="popup-subscribe-radio"></span>
                             <span class="popup-choice-question popup-choice-subscribe subscribe-variant">Да</span>
                         </label>
                         <label class="popup-subscribe-checkbox">
                             <input class="visually-hidden" type="radio" name="popup-subscribe-ch">
-                            <span class="popup-subscribe-radio radio-no"></span>
-                            <span class="popup-choice-question popup-choice-subscribe subscribe-variant">Нет</span>
+                            <span class="popup-choice-question popup-choice-subscribe subscribe-variant radio-no">Нет</span>
                         </label>
                     </div>
-                    <form action="#" class="what-content">
+                    <div class="what-content">
                         <h3 class="popup-choice-question popup-choice-subscribe">
                             Расскажите, какой контент вы хотели бы видеть на нашем сайте?</h3>
                         <textarea class="what-content-write" placeholder="Может, больше рецептов?"></textarea>
                         <button class="category subscribe-button what-content-btn">Отправить</button>
-                    </form>
+                    </div>
                 </form>
             </div>
-        </dialog >
+        </dialog>
         <header class="cap">
-            <img src="img/banner-bg.jpg" class="cap-image">
             <div class="cap-block">
                 <div class="cap-header">
                     <img class="cap-logo" src="svg/noemi-logo.svg" alt="image">
-                    <ul class="cap-menu">
+                    <div class="cap-menu-tablet">
+                        <input id="menu" class="cap-menu-tablet__input" type="checkbox">
+                        <ul class="cap-menu">
+                            <li><a class="cap-menu__link" href="#">Главная</a></li>
+                            <li><a class="cap-menu__link" href="#">Посты</a></li>
+                            <li><a class="cap-menu__link" href="#">Статьи</a></li>
+                            <li><a class="cap-menu__link" href="#">Теги</a></li>
+                            <li><a class="cap-menu__link" href="#">Темы</a></li>
+                            <li><a class="cap-menu__link" href="#">Контакты</a></li>
+                        </ul>
+                        <label for="menu" class="cap-menu-tablet__box">
+                            <div class="cap-menu-tablet__btn"></div>
+                            <div class="cap-menu-tablet__btn"></div>
+                            <div class="cap-menu-tablet__btn"></div>
+                        </label>
+                    </div>
+                    <ul class="cap-menu__desktop">
                         <li><a class="cap-menu__link" href="#">Главная</a></li>
                         <li><a class="cap-menu__link" href="#">Посты</a></li>
                         <li><a class="cap-menu__link" href="#">Статьи</a></li>
@@ -105,7 +102,7 @@
                     </div>
                 </article>
                 <article class="trends-container__block">
-                    <img src="img/trend2.jpg" class="trends-container__blok-photo">
+                    <img src="img/trend2.jpg" class="trends-container__blok-photo" alt="image">
                     <div class="trends-container__block-fon">
                         <div class="trends-container__block-info">
                             <ul class="category category-personal">
@@ -117,7 +114,7 @@
                     </div>
                 </article>
                  <article class="trends-container__block">
-                    <img src="img/trend3.jpg" class="trends-container__blok-photo">
+                    <img src="img/trend3.jpg" class="trends-container__blok-photo" alt="image">
                     <div class="trends-container__block-fon">
                         <div class="trends-container__block-info">
                             <ul class="category category-personal">
@@ -146,11 +143,11 @@
         </section>
         <main class="basic-info">
             <section class="post-list">
-                <article class="post-list-block">
+                <article class="post-list-block post-list-line">
                     <img src="img/last-post1.jpg" class="post-list-block-photo" alt="image">
                     <div class="post-frame-and-text">
                         <div class="post-list-block-frame">
-                            <ul class="category">
+                            <ul class="category category__frame">
                                 <li><a class="category__links" href="#">travel</a></li>
                                 <li><a class="category__links" href="#">health</a></li>
                             </ul>
@@ -168,11 +165,11 @@
                         </div>
                     </div>
                 </article>
-                <article class="post-list-block">
+                <article class="post-list-block post-list-line">
                     <img src="img/last-post2.jpg" class="post-list-block-photo" alt="image">
                     <div class="post-frame-and-text">
                         <div class="post-list-block-frame">
-                            <ul class="category">
+                            <ul class="category category__frame">
                                 <li><a class="category__links" href="#">health</a></li>
                                 <li><a class="category__links" href="#">lifestyle</a></li>
                             </ul>
@@ -189,11 +186,11 @@
                         </div>
                     </div>
                 </article>
-                <article class="post-list-block">
+                <article class="post-list-block post-list-line">
                     <img src="img/last-post3.jpg" class="post-list-block-photo" alt="image">
                     <div class="post-frame-and-text">
                         <div class="post-list-block-frame">
-                            <ul class="category">
+                            <ul class="category category__frame">
                                 <li><a class="category__links" href="#">music</a></li>
                             </ul>
                             <a class="basic-title secondary-title post-title-block" href="#">Лучшие музыкальные фестивали этого лета</a>
@@ -212,11 +209,11 @@
                         </div>
                     </div>
                 </article>
-                <article class="post-list-block">
+                <article class="post-list-block post-list-line">
                     <img src="img/last-post4.jpg" class="post-list-block-photo" alt="image">
                     <div class="post-frame-and-text">
                         <div class="post-list-block-frame">
-                            <ul class="category">
+                            <ul class="category category__frame">
                                 <li><a class="category__links" href="#">lifestyle</a></li>
                                 <li><a class="category__links" href="#">food</a></li>
                             </ul>
@@ -232,16 +229,16 @@
                         </div>
                     </div>
                 </article>
-                <article class="post-list-block">
+                <article class="post-list-block post-list-line">
                     <img src="img/last-post5.jpg" class="post-list-block-photo" alt="image">
                     <div class="post-frame-and-text">
                         <div class="post-list-block-frame">
-                            <ul class="category">
+                            <ul class="category category__frame">
                                 <li><a class="category__links" href="#">lifestyle</a></li>
                                 <li><a class="category__links" href="#">interior</a></li>
                                 <li><a class="category__links" href="#">art</a></li>
                             </ul>
-                            <a class="basic-title secondary-title" href="#">Делаем модные принты на подушках для интерьера</a>
+                            <a class="basic-title secondary-title post-title-block" href="#">Делаем модные принты на подушках для интерьера</a>
                             <div class="date-author">
                                 <span class="basic-title post-list-date">10 июня 2019</span>
                                 <span class="basic-title post-list-author">Неизвестный автор</span>
@@ -354,7 +351,9 @@
                 <h2 class="basic-title shop-title">Наши изделия</h2>
                 <div class="shop-container">
                     <article class="shop-container-block">
-                        <img src="img/shop-item-desk1.jpg" class="shop-photo" alt="image">
+                        <img src="img/shop-item-mobile1.jpg" class="shop-photo__mobile" alt="image">
+                        <img src="img/shop-item-tablet1.jpg" class="shop-photo__tablet" alt="image">
+                        <img src="img/shop-item-desk1.jpg" class="shop-photo__desktop" alt="image">
                         <div class="shop-info">
                             <h2 class="basic-title secondary-title cursor-auto">
                                 Подушки на диван</h2>
@@ -372,8 +371,10 @@
                         </div>
                     </article>
                     <article class="shop-container-block">
-                        <img src="img/shop-item-desk2.jpg" class="shop-photo" alt="image">
-                        <div class="shop-info">
+                        <img src="img/shop-item-mobile2.jpg" class="shop-photo__mobile" alt="image">
+                        <img src="img/shop-item-tablet2.jpg" class="shop-photo__tablet" alt="image">
+                        <img src="img/shop-item-desk2.jpg" class="shop-photo__desktop" alt="image">
+                        <div class="shop-info shop-info__little-one">
                             <h2 class="basic-title secondary-title cursor-auto">
                                 Кукла «Зайчик»</h2>
                             <p class="shop-info-text">Интерьерная рукодельная кукла «Зайчик»,
@@ -390,9 +391,11 @@
                         </div>
                     </article>
                     <article class="shop-container-block">
-                        <img src="img/shop-item-desk3.jpg" class="shop-photo" alt="image">
-                        <div class="shop-info">
-                            <h2 class="basic-title secondary-title cursor-auto">
+                        <img src="img/shop-item-mobile3.jpg" class="shop-photo__mobile" alt="image">
+                        <img src="img/shop-item-tablet3.jpg" class="shop-photo__tablet" alt="image">
+                        <img src="img/shop-item-desk3.jpg" class="shop-photo__desktop" alt="image">
+                        <div class="shop-info shop-info__little">
+                            <h2 class="basic-title secondary-title cursor-auto for-normal">
                                 Шестиугольная рамка</h2>
                             <p class="shop-info-text">Необычная рамка для украшения дома из видео
                                 <a class="shop-info-text__link" href="#">

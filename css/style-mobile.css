@@ -33,7 +33,7 @@ body {
 
 .container {
     position: relative;
-    max-width: 1660px;
+    max-width: 360px;
     width: 100%;
     margin: 0 auto;
 }
@@ -77,22 +77,22 @@ body {
 
 .popup__info {
     position: relative;
-    width: 390px;
-    height: 589px;
+    width: 331px;
+    height: 546px;
     background-color: #ffffff;
     box-sizing: border-box;
-    padding: 45px 30px 54px 30px;
-    top: 238px;
-    left: 637px;
+    padding: 20px 25px 30px 25px;
+    top: 56px;
+    margin: 0 auto;
 }
 
 .popup__close {
     position: absolute;
-    width: 18px;
-    height: 18px;
+    width: 27px;
+    height: 27px;
     border-radius: 0px;
     right: 0;
-    top: -26px;
+    top: -34px;
     cursor: pointer;
 }
 
@@ -115,7 +115,7 @@ body {
     display: block;
     width: 66px;
     height: 3px;
-    margin: 7px auto 10px auto;
+    margin: 9px auto 10px auto;
     opacity: 0.400;
     background: #b59f5b;
 }
@@ -144,7 +144,7 @@ body {
     -webkit-appearance: none;
     -moz-appearance: none;
     box-sizing: border-box;
-    width: 330px;
+    width: 280px;
     height: 48px;
     border: none;
     background-color: #f4f7f6;
@@ -163,14 +163,16 @@ body {
 }
 
 .popup-subscribe {
-    width: 330px;
+    width: 280px;
     height: 58px;
     margin: 33px 0 0 0;
 }
 
 .popup-choice-subscribe {
+    width: 280px;
     line-height: 1;
-    margin-bottom: 7px;
+    margin-bottom: 9px;
+    margin-top: 23px;
 }
 
 .subscribe-variant {
@@ -186,9 +188,9 @@ body {
     content: "";
     display: inline-block;
     position: relative;
-    width: 15px;
-    height: 15px;
-    border-radius: 8px;
+    width: 23px;
+    height: 23px;
+    border-radius: 12px;
     background-color: #ffffff;
     border: 1px solid #b59f5b;
     margin: 0 4px 0 1px;
@@ -196,25 +198,14 @@ body {
     line-height: 1;
 }
 
-/*.form-empty-circle {
-    width: 17px;
-    height: 17px;
-}
-
-.form-circle {
-    display: none;
-    width: 17px;
-    height: 17px;
-}*/
-
 .radio-no {
-    margin: 0 4px 0 17px;
+    margin: 0 4px 0 31px;
 }
 
 .visually-hidden:checked + .subscribe-variant::before {
     content: '';
     background-color: #b59f5b;
-    box-shadow: inset 0 0 0 2px white;
+    box-shadow: inset 0 0 0 3px white;
 }
 
 .what-content {
@@ -225,10 +216,11 @@ body {
 .what-content-write {
     border: none;
     box-sizing: border-box;
-    width: 330px;
+    width: 280px;
     height: 131px;
+    resize: none;
     background-color: #f4f7f6;
-    margin: 25px 0 0 0;
+    margin: 8px 0 10px 0;
     padding: 0 0 0 21px;
     opacity: 0.541;
     font-size: 13px;
@@ -243,9 +235,10 @@ body {
     outline: 1px solid #b59f5b;
 }
 
-.what-content-btn {
-    min-width: 330px;
+.what-content > .what-content-btn {
+    width: 280px;
     height: 48px;
+    margin: 8px 0 0 0;
 }
 
 dialog {
@@ -260,8 +253,8 @@ dialog {
     display: flex;
     flex-direction: column;
     width: 100%;
-    min-height: 450px;
-    background-image: url("../img/banner-bg.jpg");
+    min-height: 639px;
+    background-image: url("../img/banner-mobile.jpg");
     z-index: 0;
     background-size: cover;
 }
@@ -277,35 +270,72 @@ dialog {
     flex-grow: 1;
     background-color: rgba(0, 0, 0, 0.6);
     z-index: 1;
-    padding: 28px 240px  25px 235px;
+    padding: 31px 16px 210px 16px;
 }
 
 .cap-header {
     display: flex;
+    flex-direction: column;
+    /*justify-content: space-between;*/
+    align-items: center;
     width: 100%;
-    height: 40px;
-    margin-bottom: auto;
+    height: 253px;
+    margin-bottom: 37px;
 }
 
 .cap-logo {
-    width: 179px;
+    width: 269px;
     object-fit: cover;
-    margin-left: 10px;
-}
-
-.cap-menu-tablet {
-    display: none;
-}
-
-.cap-menu-tablet__input {
-    display: none;
+    order: 2;
 }
 
 .cap-menu__desktop {
+    display: none;
+}
+
+.cap-menu-tablet {
     display: flex;
-    margin-left: auto;
+    justify-content: end;
+    height: 35px;
+    box-sizing: border-box;
+    align-self: end;
+    order: 1;
+    margin-bottom: 175px;
+}
+
+.cap-menu-tablet__box {
+    display: flex;
+    width: 23px;
+    margin: 0;
+    height: 19px;
+    flex-direction: column;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.cap-menu-tablet__input {
+    width: 1px;
+    height: 1px;
+    margin: -1px;
     padding: 0;
-    gap: 36px;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
+}
+
+.cap-menu-tablet__btn {
+    display: block;
+    width: 23px;
+    height: 3px;
+    background-color: #ffffff;
+}
+
+.cap-menu {
+    display: none;
+    flex-wrap: wrap;
+    margin: 0 30px 0 0;
+    padding: 0;
+    gap: 34px;
     list-style-type: none;
     font-size: 13px;
     text-transform: uppercase;
@@ -315,20 +345,8 @@ dialog {
     font-style: normal;
 }
 
-.cap-menu {
+.cap-menu-tablet__input:checked + .cap-menu {
     display: flex;
-    margin-top: 16px;
-    margin-left: auto;
-    margin-bottom: 10px;
-    padding: 0;
-    gap: 36px;
-    list-style-type: none;
-    font-size: 13px;
-    text-transform: uppercase;
-    color: #ffffff;
-    font-family: "Open Sans", sans-serif;
-    font-weight: normal;
-    font-style: normal;
 }
 
 .cap-menu__link {
@@ -341,21 +359,11 @@ dialog {
     text-decoration: underline;
 }
 
-.cap-content {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 700px;
-    height: 100%;
-    flex-grow: 1;
-    text-align: center;
-}
-
 .cap-title {
+    margin: 38px 0 0 0;
     margin: 0px;
-    font-size: 45px;
-    line-height: 75px;
+    font-size: 26px;
+    line-height: 36px;
     text-transform: uppercase;
     color: #ffffff;
     font-family: "Open Sans-Bold", sans-serif;
@@ -371,9 +379,9 @@ dialog {
     position: relative;
     box-sizing: border-box;
     align-items: center;
-    margin-top: 57px;
+    margin-top: 35px;
     width: 100%;
-    min-height: 386px;
+    min-height: 554px;
 }
 
 .basic-title {
@@ -382,7 +390,7 @@ dialog {
     font-family: "Open Sans-Bold", sans-serif;
     font-weight: bold;
     font-style: normal;
-    font-size: 20px;
+    font-size: 16px;
     line-height: 29px;
     text-transform: uppercase;
     color: #0f0d0e;
@@ -403,22 +411,23 @@ dialog {
     flex-wrap: wrap;
     box-sizing: border-box;
     width: 100%;
-    min-height: 320px;
-    margin-top: 28px;
-    gap: var(--gap-trends-container);
+    min-height: 934px;
+    margin-top: 24px;
+    gap: 2px;
 }
 
 .trends-container__block {
     display: flex;
     position: relative;
-    width: calc((1660px - 12px) / 4);
-    min-height: 319px;
+    width: 100%;
+    min-height: 232px;
     z-index: 0;
 }
 
 .trends-container__blok-photo {
     position: absolute;
     width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     object-fit: cover;
@@ -433,18 +442,19 @@ dialog {
     top: 0;
     left: 0;
     width: 100%;
-    min-height: 319px;
+    min-height: 232px;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 0 0 16px 18px;
+    padding: 0 0 16px 15px;
     z-index: 2;
 }
 
 .trends-container__block-info {
     box-sizing: border-box;
-    padding-top: 23px;
-    padding-left: 36px;
-    padding-bottom: 33px;
-    width: 370px;
+    padding-top: 16px;
+    padding-left: 19px;
+    padding-bottom: 25px;
+    width: 330px;
+    min-height: 127px;
     background-color: rgba(0,0,0,0);
     border: 3px solid #b59f5b;
 }
@@ -453,16 +463,12 @@ dialog {
     padding-left: 39px;
 }
 
-.personal {
-    width: 250px;
-}
-
 .category {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     font-size: 14px;
-    line-height: 40px;
+    line-height: 37px;
     text-transform: uppercase;
     color: #b59f5b;
     font-family: "Open Sans-Bold", sans-serif;
@@ -474,9 +480,9 @@ dialog {
     cursor: pointer;
 }
 
-.category-personal {
+/*.category-personal {
     margin-bottom: -3px;
-}
+}*/
 
 .category__links {
     text-decoration: none;
@@ -490,10 +496,17 @@ dialog {
 
 .trends-secondary-title {
     display: block;
-    line-height: 24px;
+    width: 274px;
+    font-size: 16px;
+    line-height: 20px;
     color: #ffffff;
     cursor: pointer;
     text-decoration: none;
+    margin-top: 2px;
+}
+
+.personal {
+    width: 204px;
 }
 
 .trends__secondary-title:hover {
@@ -504,58 +517,74 @@ dialog {
     display: flex;
     flex-wrap: wrap;
     position: relative;
-    padding: 0 15px 0 15px;
-    margin: 64px auto 0 auto;
+    padding: 0 0px 0 0px;
+    margin: 45px auto 0 auto;
     box-sizing: border-box;
-    width: 1200px;
+    width: 330px;
 }
 
 .post-list {
     display: flex;
     flex-direction: column;
-    gap: 60.5px;
+    gap: 37px;
     box-sizing: border-box;
     margin: 0;
-    width: 800px;
+    width:100%;
 }
 
 .post-list-block {
     display: flex;
-    gap: 29px;
+    flex-direction: column;
     position: relative;
     width: 100%;
-    min-height: 294px;
+    min-height: 440px;
+}
+
+.post-list-line::after {
+    content: '';
+    display: block;
+    width: 330px;
+    height: 3px;
+    margin-top: 16px;
+    background-color: #eeeeee;
 }
 
 .post-frame-and-text {
     display: flex;
     flex-direction: column;
-    width: 390px;
+    width: 100%;
+    margin-top: -2px;
 }
 
 .post-list-block-photo {
-    height: 294px;
+    height: 253px;
     width: auto;
     object-fit: cover;
 }
 
 .post-list-block-frame {
     width: 100%;
-    margin-top: -13px;
-    margin-bottom: 40px;
+    margin-top: 0px;
+    margin-bottom: 8px;
+}
+
+.category__frame {
+    width: 330px;
+    line-height: 40px;
 }
 
 .secondary-title {
     display: block;
-    line-height: 24px;
+    line-height: 22px;
     cursor: pointer;
     text-decoration: none;
 }
 
 .post-title-block {
     display: block;
-    width: 340px;
-    margin-top: -5px;
+    font-size: 16px;
+    line-height: 20px;
+    width: 330px;
     color: #0f0d0e;
 }
 
@@ -566,9 +595,8 @@ dialog {
 .date-author {
     display: flex;
     text-align: start;
-    gap: 13px;
-    margin-top: 10px;
-    margin-left: -7px;
+    width: 330px;
+    gap: 15px;
 }
 
 .post-list-date {
@@ -577,7 +605,8 @@ dialog {
     color: #888888;
     font-family: "Open Sans";
     font-weight: normal;
-    margin-top: 6px;
+    margin-top: 3px;
+    margin-left: -4px;
 }
 
 .post-list-author {
@@ -585,17 +614,17 @@ dialog {
     line-height: 40px;
     text-transform: none;
     color: #000000;
-    margin-top: 6px;
+    margin-left: -5px;
 }
 
 .post-list-block-text {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 11px;
-    width: 367px;
-    font-size: 15px;
-    line-height: 22px;
+    gap: 5px;
+    width: 327px;
+    font-size: 14px;
+    line-height: 20px;
     color: #0f0d0e;
     font-family: "Open Sans";
     font-weight: normal;
@@ -606,28 +635,27 @@ dialog {
     width: 100%;
     margin: 0;
     position: relative;
-    top: -5px;
+    top: -4px;
 }
 
 .sidebar {
     display: flex;
     flex-direction: column;
-    gap: 61px;
     position: relative;
-    top: 0;
-    left: 99px;
-    width: 271px;
+    width: 100%;
+    margin-top: 44px;
 }
 
 .latest-posts {
     display: flex;
     flex-direction: column;
     gap: 22px;
+    margin-bottom: 60px;
 }
 
 .sidebar-titles {
     margin: -10px 0 0 0;
-    font-size: 14px;
+    font-size: 16px;
     text-align: center;
 }
 
@@ -636,14 +664,14 @@ dialog {
     display: block;
     width: 66px;
     height: 3px;
-    margin: 5px auto 7px auto;
+    margin: 6px auto 7px auto;
     opacity: 0.400;
     background: #b59f5b;
 }
 
 .latest-one-post {
     display: flex;
-    gap: 20px;
+    gap: 14px;
     width: 100%;
     min-height: 70px;
 }
@@ -655,21 +683,24 @@ dialog {
 }
 
 .latest-one-post-info {
-    width: 181px;
+    width: 100%;
     min-height: 70px;
 }
 
 .latest-post-date {
     display: block;
     margin-top: -16px;
+    margin-left: 5px;
     opacity: 0.541;
     color: #000000;
 }
 
 .latest-post-name {
     display: block;
+    width: 100%;
     margin: 0;
-    margin-top: -11px;
+    margin-top: -12px;
+    margin-left: 3px;
     font-size: 14px;
     line-height: 18px;
     color: #000000;
@@ -679,12 +710,13 @@ dialog {
 
 .search {
     display: flex;
-    width: 271px;
+    width: 330px;
+    margin-bottom: 43px;
 }
 
 .search-input {
     box-sizing: border-box;
-    width: 222px;
+    width: 282px;
     height: 48px;
     border: none;
     background-color: #f4f7f6;
@@ -722,11 +754,12 @@ dialog {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    margin-bottom: 44px;
 }
 
 .subscribe-email {
     display: block;
-    width: 270px;
+    width: 100%;
     height: 48px;
     background-color: #f4f7f6;
     box-sizing: border-box;
@@ -752,7 +785,7 @@ dialog {
 .subscribe-button {
     display: block;
     border: none;
-    width: 270px;
+    width: 100%;
     height: 48px;
     background-color: #b59f5b;
     color: #ffffff;
@@ -766,14 +799,15 @@ dialog {
 
 .tags > .sidebar-titles::after {
     content: '';
-    margin: 6px auto 23px auto;
+    margin: 6px auto 26px auto;
 }
 
 .tags {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    width: 271px;
+    width: 100%;
+    margin-bottom: 45px;
 }
 
 .list-tags {
@@ -790,7 +824,7 @@ dialog {
     justify-content: center;
     box-sizing: border-box;
     color: #0f0d0e;
-    padding: 0 14px;
+    padding: 0 12px;
     font-size: 12px;
     height: 30px;
     background-color: rgba(244, 243, 241, 0);
@@ -806,6 +840,7 @@ dialog {
 .categories-list {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .categories__russian {
@@ -836,13 +871,16 @@ dialog {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 64px;
+    margin-top: 44px;
     box-sizing: border-box;
-    width: 1170px;
+    width: 100%;
 }
 
 .shop-title {
     margin: -7px 0 0 0;
+    font-size: 16px;
+    line-height: 29px;
+    color: #0f0d0e;
 }
 
 .shop-title::after {
@@ -868,24 +906,24 @@ dialog {
     position: relative;
     z-index: 0;
     box-sizing: border-box;
-    width: 347px;
-    min-height: 440px;
+    width: 100%;
+    min-height: 435px;
     margin-top: 28px;
 }
 
 .shop-photo__desktop {
+    display: none;
+}
+
+.shop-photo__mobile {
     position: relative;
+    background-color: #eff6f1;
     top: 0;
     left: 23px;
     z-index: 1;
 }
 
-
 .shop-photo__tablet {
-    display: none;
-}
-
-.shop-photo__mobile {
     display: none;
 }
 
@@ -894,25 +932,37 @@ dialog {
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    padding: 0 21px 0 20px;
+    padding: 0 25px 0 22px;
     left: 0;
-    margin-top: -35px;
+    margin-top: -37px;
     width: 100%;
-    min-height: 267px;
+    min-height: 220px;
     z-index: 2;
     background-color: rgba(0,0,0,0);
     border: 3px solid #b59f5b;
 }
 
-.cursor-auto {
-    cursor: auto;
+.shop-info__little {
+    min-height: 240px;
 }
 
-.shop-info > .secondary-title {
-    margin-top: 52px;
+.shop-info__little-one {
+    min-height: 261px;
+}
+
+.cursor-auto {
+    cursor: auto;
+    font-size: 17px;
+    line-height: 22px;
+    margin-top: 50px;
+}
+
+.for-normal {
+    margin-top: 46px;
 }
 
 .shop-info-text {
+    width: 291px;
     font-size: 15px;
     line-height: 22px;
     margin: 2px 0 0 0;
@@ -986,6 +1036,8 @@ dialog {
 
 .price-now {
     position: absolute;
+    font-size: 20px;
+    line-height: 24px;
     left: 0;
     bottom: 4px;
     cursor: auto;
@@ -1004,10 +1056,9 @@ dialog {
 
 .site-end {
     position: relative;
-    width: 1170px;
-    height: 213px;
-    padding: 0 15px 0 15px;
-    margin: 64px auto 0 auto;
+    width: 100%;
+    min-height: 153px;
+    margin: 43px auto 0 auto;
 }
 
 .site-end-social {
@@ -1043,8 +1094,9 @@ dialog {
 
 .site-end-copyright {
     justify-content: center;
-    margin: 54px 0 0 0;
+    margin: 32px 0 0 0;
     cursor: auto;
     font-size: 12px;
+    line-height: 40px;
     color: #999999;
 }
