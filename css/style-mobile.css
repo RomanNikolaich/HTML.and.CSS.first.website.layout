@@ -102,8 +102,8 @@ body {
     height: 100%;
 }
 
-.visually-hidden:checked + .popup__block {
-    display: flex;
+.close:checked ~ .popup {
+    display: none;
 }
 
 .popup-title {
@@ -597,6 +597,10 @@ dialog {
     color: #0f0d0e;
 }
 
+.post-title-block:hover {
+    color: #b59f5b;
+}
+
 .secondary-title-post-list:hover {
     color: #b59f5b;
 }
@@ -715,6 +719,10 @@ dialog {
     color: #000000;
     cursor: pointer;
     text-decoration: none;
+}
+
+.latest-post-name:hover {
+    color: #b59f5b;
 }
 
 .search {
@@ -839,6 +847,10 @@ dialog {
     background-color: rgba(244, 243, 241, 0);
     border: 3px solid #eeeeee;
     text-decoration: none;
+}
+
+.category__tags:hover {
+    border: 3px solid #b59f5b;
 }
 
 .categories > .sidebar-titles::after {

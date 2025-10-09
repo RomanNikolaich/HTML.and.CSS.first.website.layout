@@ -4,16 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Мой проект</title>
-    <link rel="stylesheet" href="css/style-mobile.css" media="(max-width: 767px)">
-    <link rel="stylesheet" href="css/style-tablet.css" media="(min-width: 768px) and (max-width: 1659px)">
-    <link rel="stylesheet" href="css/style-dekstop.css" media="(min-width: 1660px)">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
     <div class="container">
-        <dialog class="popup" open>
+        <input id="close" type="checkbox" class="visually-hidden close">
+        <dialog class="popup">
             <div class="popup__block">
                 <form action="#" method="dialog" class="popup__info">
-                    <label class="popup__close"><img src="svg/form-x.svg" alt="image"></label>
+                    <label for="close" class="popup__close"><img src="svg/form-x.svg" alt="image"></label>
                     <h2 class="basic-title popup-title">Ваш фидбек</h2>
                     <div class="popup-choice">
                         <h3 class="popup-choice-question">Как часто вы заходите на сайт?</h3>
