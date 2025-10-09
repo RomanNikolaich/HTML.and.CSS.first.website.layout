@@ -1064,6 +1064,11 @@ dialog {
     color: #999999;
 }
 
+h3 {
+    margin: 0;
+    padding: 0;
+}
+
 @media (min-width: 768px) and (max-width: 1659px) {
     .container {
         position: relative;
@@ -2112,6 +2117,11 @@ dialog {
         font-size: 12px;
         line-height: 40px;
         color: #999999;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 0;
     }
 }
 
@@ -3191,5 +3201,10 @@ dialog {
         font-size: 12px;
         line-height: 40px;
         color: #999999;
+    }
+
+    h3 {
+        margin: 0;
+        padding: 0;
     }
 }
