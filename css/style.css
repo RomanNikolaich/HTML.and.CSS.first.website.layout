@@ -23,19 +23,23 @@
 }
 
 html {
+    height: 100%;
     font-size: 100%;
 }
 
 body {
+    width: 100%;
+    height: 100%;
     margin: 0;
     background: #ffffff;
 }
 
 .container {
     position: relative;
-    max-width: 1660px;
     width: 100%;
 }
+
+/** { outline: 1px solid red }*/
 
 .popup {
     display: none;
@@ -98,7 +102,8 @@ body {
         box-sizing: border-box;
         padding: 45px 30px 54px 30px;
         top: 238px;
-        left: 637px;
+        left: 50%;
+        transform: translate(-50%);
     }
 }
 
@@ -275,6 +280,7 @@ dialog {
     background-image: url("../img/banner-bg.jpg");
     z-index: 0;
     background-size: cover;
+    background-position: bottom left;
 }
 
 .cap-block {
@@ -378,12 +384,12 @@ dialog {
 
 .trends {
     display: flex;
+    width: 100%;
     flex-direction: column;
     position: relative;
     box-sizing: border-box;
     align-items: center;
     margin-top: 57px;
-    width: 100%;
     min-height: 386px;
 }
 
@@ -422,17 +428,19 @@ dialog {
 .trends-container__block {
     display: flex;
     position: relative;
-    width: calc((1660px - 12px) / 4);
-    min-height: 319px;
+    width: calc((100% - 12px) / 4);
+    max-height: 319px;
     z-index: 0;
 }
 
 .trends-container__blok-photo {
     position: absolute;
     width: 100%;
+    height: 100%;
     top: 0;
     left: 0;
     object-fit: cover;
+    object-position: center center;
     z-index: 1;
 }
 
@@ -446,7 +454,7 @@ dialog {
     width: 100%;
     min-height: 319px;
     background-color: rgba(0, 0, 0, 0.6);
-    padding: 0 0 16px 18px;
+    padding: 0 0 16px 0;
     z-index: 2;
 }
 
@@ -455,8 +463,8 @@ dialog {
     padding-top: 23px;
     padding-left: 36px;
     padding-bottom: 33px;
+    margin: 0 auto;
     width: 370px;
-    background-color: rgba(0,0,0,0);
     border: 3px solid #b59f5b;
 }
 
@@ -904,14 +912,16 @@ dialog {
     margin-top: 28px;
 }
 
-.shop-photo__desktop {
-    position: relative;
-    top: 0;
-    left: 23px;
-    z-index: 1;
+@media (min-width: 1660px) {
+    .shop-photo {
+        position: relative;
+        top: 0;
+        left: 23px;
+        z-index: 1;
+    }
 }
 
-@media (min-width: 1660px) {
+/*@media (min-width: 1660px) {
     .shop-photo__tablet {
         display: none;
     }
@@ -919,7 +929,7 @@ dialog {
     .shop-photo__mobile {
         display: none;
     }
-}
+}*/
 
 .shop-info {
     position: relative;
@@ -1089,7 +1099,6 @@ h3 {
 @media (min-width: 768px) and (max-width: 1659px) {
     .container {
         position: relative;
-        max-width: 768px;
         width: 100%;
     }
 
@@ -1133,7 +1142,8 @@ h3 {
             box-sizing: border-box;
             padding: 45px 30px 54px 30px;
             top: 191px;
-            left: 188px;
+            left: 50%;
+            transform: translate(-50%);
         }
     }
 
@@ -1313,6 +1323,7 @@ h3 {
         background-image: url("../img/banner-bg-tablet.jpg");
         z-index: 0;
         background-size: cover;
+        background-position: bottom left;
     }
 
     .cap-block {
@@ -1427,6 +1438,7 @@ h3 {
 
     .trends {
         display: flex;
+        width: 100%;
         flex-direction: column;
         position: relative;
         box-sizing: border-box;
@@ -1460,6 +1472,7 @@ h3 {
 
     .trends-container {
         display: flex;
+        width: 100%;
         flex-wrap: wrap;
         box-sizing: border-box;
         width: 100%;
@@ -1471,8 +1484,8 @@ h3 {
     .trends-container__block {
         display: flex;
         position: relative;
-        width: calc((768px - 4px) / 2);
-        min-height: 247px;
+        width: calc((100% - 4px) / 2);
+        max-height: 247px;
         z-index: 0;
     }
 
@@ -1496,7 +1509,7 @@ h3 {
         width: 100%;
         min-height: 247px;
         background-color: rgba(0, 0, 0, 0.6);
-        padding: 0 0 15px 20px;
+        padding: 0 0 15px 0;
         z-index: 2;
     }
 
@@ -1505,7 +1518,8 @@ h3 {
         padding-top: 20px;
         padding-left: 34px;
         padding-bottom: 28px;
-        width: 343px;
+        margin: 0 auto;
+        min-width: 343px;
         background-color: rgba(0,0,0,0);
         border: 3px solid #b59f5b;
     }
@@ -1968,7 +1982,7 @@ h3 {
         margin-top: 28px;
     }
 
-    .shop-photo__desktop {
+    /*.shop-photo__desktop {
         display: none;
     }
 
@@ -1977,7 +1991,8 @@ h3 {
             display: none;
         }
     }
-    .shop-photo__tablet {
+    */
+    .shop-photo {
         position: relative;
         background-color: #eff6f1;
         top: 0;
@@ -2160,7 +2175,7 @@ h3 {
 
 @media (max-width: 767px) {
     body {
-        width: 360px;
+        width: 100%;
         margin: 0;
         background: #ffffff;
     }
@@ -2179,7 +2194,6 @@ h3 {
     }
     .container {
         position: relative;
-        max-width: 360px;
         width: 100%;
         margin: 0 auto;
     }
@@ -2209,7 +2223,8 @@ h3 {
         box-sizing: border-box;
         padding: 20px 25px 30px 25px;
         top: 56px;
-        left: 15px;
+        left: 50%;
+        transform: translate(-50%);
     }
 
     .popup__close {
@@ -2387,6 +2402,7 @@ h3 {
         background-image: url("../img/banner-mobile.jpg");
         z-index: 0;
         background-size: cover;
+        background-position: bottom left;
     }
 
     .cap-block {
@@ -2469,7 +2485,7 @@ h3 {
         z-index: 1;
         flex-direction: row;
         flex-wrap: wrap;
-        margin: 0 4px 0 0;
+        margin: 0 4px 0 0px;
         padding: 0;
         gap: 34px;
         list-style-type: none;
@@ -2484,7 +2500,7 @@ h3 {
         right: 100%;
         top: 0;
         width: calc(100vw - 50px);
-        max-width: 300px;
+        max-width: 500px;
         box-sizing: border-box;
     }
 
@@ -2592,7 +2608,7 @@ h3 {
         width: 100%;
         min-height: 232px;
         background-color: rgba(0, 0, 0, 0.6);
-        padding: 0 0 16px 15px;
+        padding: 0 0 16px 0;
         z-index: 2;
     }
 
@@ -2602,6 +2618,7 @@ h3 {
         padding-left: 19px;
         padding-bottom: 25px;
         width: 330px;
+        margin: 0 auto;
         min-height: 127px;
         background-color: rgba(0,0,0,0);
         border: 3px solid #b59f5b;
@@ -3068,15 +3085,15 @@ h3 {
         margin-top: 28px;
     }
 
-    .shop-photo__desktop {
+    /*.shop-photo__desktop {
         display: none;
     }
 
     .shop-photo__tablet {
         display: none;
-    }
+    }*/
 
-    .shop-photo__mobile {
+    .shop-photo {
         position: relative;
         background-color: #eff6f1;
         top: 0;
